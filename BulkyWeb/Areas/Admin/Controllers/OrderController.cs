@@ -143,7 +143,7 @@ namespace BeautiqueWeb.Areas.Admin.Controllers
                 .GetAll(u => u.OrderHeaderId == OrderVM.OrderHeader.Id, includeProperties: "Product");
 
             //stripe logic
-            var domain = "https://beautiqueweb-projectdb-a4bnbthqc8cwdhfa.westus3-01.azurewebsites.net/";
+            var domain = "https://localhost:7169/";
 
             var options = new SessionCreateOptions
             {
