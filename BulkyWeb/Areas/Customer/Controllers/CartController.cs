@@ -19,9 +19,11 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
         private readonly IUnitOfWork _unitOfWork;
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
-        public CartController(IUnitOfWork unitOfWork)
+        public CartController(IUnitOfWork unitOfWork, IConfiguration configuration)
         {
+
             _unitOfWork = unitOfWork;
+            _configuration = configuration;
         }
         public IActionResult Index()
         {
