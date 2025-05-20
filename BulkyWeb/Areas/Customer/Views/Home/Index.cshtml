@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <header class="py-5 text-center">
+        <div class="container-fluid">
+            <h1 class="display-4 fw-bolder">Shop in style</h1>
+            <p class="lead fw-normal text-muted mb-0">Discover your favorite products</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container-fluid px-2">
+            <div class="row g-4 justify-content-center">
+                @foreach (var product in Model)
+                {
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="card border-0 shadow-lg">
+                            <img src="@product.ImageUrl" class="card-img-top" alt="@product.Title" />
+                            <div class="card-body">
+                                <h5 class="fw-bolder">@product.Title</h5>
+                                <p class="text-warning">by <b>@product.Maker</b></p>
+                                <p class="text-muted text-decoration-line-through">@product.ListPrice.ToString("c")</p>
+                                <p class="fw-bold text-dark">As low as: @product.Price100.ToString("c")</p>
+                                <a asp-action="Details" asp-route-productId="@product.Id" class="btn btn-dark text-light">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</body>
+

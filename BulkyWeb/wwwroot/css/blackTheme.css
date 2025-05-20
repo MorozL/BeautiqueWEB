@@ -1,0 +1,253 @@
+﻿:root {
+    --bg-dark: #121212;
+    --bg-card: #1E1E1E;
+    --accent: #BB86FC;
+    --accent-hover: #9B6CFD;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --border: #373737;
+}
+
+/* Divider */
+.divider-text:before,
+.divider-text:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+    margin: auto 0.25rem;
+    box-shadow: 0 -2px;
+}
+
+/* Base */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    color-scheme: dark;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+/* Cards */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+.card-body {
+    text-align: center;
+    width: 100%;
+}
+
+/* Header */
+header {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-card) !important;
+    padding: 0.5rem 0rem;
+    border-bottom: none !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--accent) !important;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: var(--accent-hover) !important;
+    }
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent) !important;
+}
+
+    .navbar-brand:hover {
+        color: var(--accent-hover) !important;
+    }
+
+/* Product Container */
+.product-container {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+}
+
+.product-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+    font-weight: bold;
+}
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: var(--bg-dark) !important;
+        color: var(--text-primary) !important;
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: var(--accent) !important;
+        color: #000 !important;
+    }
+
+/* Buttons */
+.btn {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #000 !important;
+}
+
+    .btn-primary:hover {
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+    }
+
+.btn-danger {
+    background-color: #CF6679;
+    border-color: #B00020;
+    color: white;
+}
+
+    .btn-danger:hover {
+        background-color: #B00020;
+        border-color: #90001C;
+    }
+
+.btn-secondary {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border) !important;
+    color: var(--text-primary);
+}
+
+    .btn-secondary:hover {
+        background-color: #2A2A2A !important;
+        border-color: #444 !important;
+        color: var(--text-primary);
+    }
+
+/* Outline Primary Button */
+.btn-outline-primary {
+    background-color: transparent !important;
+    border: 2px solid var(--accent) !important;
+    color: var(--accent) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus {
+        background-color: var(--accent) !important;
+        color: #000 !important;
+        border-color: var(--accent-hover) !important;
+    }
+
+    .btn-outline-primary:active {
+        background-color: var(--accent-hover) !important;
+        border-color: var(--accent-hover) !important;
+        color: #000 !important;
+    }
+
+/* Focus States */
+.btn:focus, .btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem var(--accent), 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+
+/* Utilities */
+.bg-primary {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #000 !important;
+}
+
+.bg-secondary {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border) !important;
+}
+
+.text-primary {
+    color: var(--accent) !important;
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+/* Специфічні стилі */
+.page-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--accent) !important;
+}
+
+/* Додаткові застосування змінних */
+.card-subtitle,
+.form-label,
+.navbar-text,
+.dropdown-header {
+    color: var(--text-secondary);
+}
+
+.input-group-text,
+.form-text {
+    color: var(--text-secondary);
+}

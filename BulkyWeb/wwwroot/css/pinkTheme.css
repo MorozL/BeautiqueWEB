@@ -1,0 +1,218 @@
+﻿/* Divider */
+.divider-text:before,
+.divider-text:after {
+    color: white;
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ff99cc; /* Рожева межі */
+    margin: auto 0.25rem;
+    box-shadow: 0 -2px;
+}
+
+/* Base styles */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Focus states */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus,
+.form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #ff69b4; /* Рожевий акцент */
+}
+
+/* Body */
+body {
+    margin-bottom: 60px;
+    background-color: #fff0f5; /* Ніжно-рожевий фон */
+    color: #6d4c5a; /* Темно-рожево-сірий текст */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cards */
+.card {
+    background-color: #ffe4e1; /* Світло-рожевий фон */
+    color: #6d4c5a;
+    transition: transform 0.2s;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+.card-body {
+    text-align: center;
+    width: 100%;
+}
+
+/* Header */
+header {
+    background-color: #ffc0cb; /* Яскраво-рожевий */
+    color: #6d4c5a;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffb6c1; /* Світло-рожевий */
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #8b5f7d; /* Глибокий рожево-фіолетовий */
+}
+
+.page-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #8b5f7d;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff69b4; /* Яскраво-рожевий при ховері */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #8b5f7d;
+}
+
+    .navbar-brand:hover {
+        color: #ff69b4;
+    }
+
+/* Product container */
+.product-container {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    background-color: #fff0f5; /* Світлий рожевий фон */
+    border: 1px solid #ffb6c1;
+}
+
+.dropdown-item {
+    color: #8b5f7d;
+    font-weight: bold;
+}
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: #ffdde1 !important; /* Світло-рожевий при ховері */
+        color: #6d4c5a !important;
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: #ffb6c1 !important; /* Середній рожевий */
+        color: #6d4c5a !important;
+    }
+
+/* Buttons */
+.btn {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #ff69b4; /* Яскраво-рожевий */
+    border-color: #ff1493;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #ff1493; /* Глибокий рожевий */
+        border-color: #db7093;
+    }
+
+.btn-danger {
+    background-color: #db7093; /* Приглушений рожевий */
+    border-color: #c71585;
+    color: white;
+}
+
+    .btn-danger:hover {
+        background-color: #c71585; /* Темний рожевий */
+        border-color: #8b0a50;
+    }
+
+/* Utilities */
+.bg-secondary {
+    background-color: #ffe4e1 !important; /* Світло-рожевий */
+    border-color: #ffb6c1 !important;
+}
+/* Додані стилі */
+.btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid #ffb6c1;
+    color: #ffb6c1;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #ff69b4;
+        border-color: #ff1493;
+        color: white;
+    }
+
+.text-primary {
+    color: #6d4c5a !important; /* Глибокий бордовий замість #ff69b4 */
+}
+
+.text-secondary {
+    color: #5d4c4c !important; /* Темний сіро-коричневий замість #6d4c5a */
+}
+
+/* Оновлений btn-primary (якщо потрібно) */
+.btn-primary {
+    background-color: #ffb6c1;
+    border-color: #ffb6c1;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-primary:hover {
+        background-color: #ff99cc;
+        border-color: #ff99cc;
+        box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    }
+.bg-primary {
+    background-color: #ffb6c1 !important;
+    border-color: #ffb6c1 !important;
+    color: white !important;
+}

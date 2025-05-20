@@ -1,0 +1,262 @@
+.divider-text:before,
+.divider-text:after {
+    color: white;
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #555;
+    margin: auto 0.25rem;
+    box-shadow: 0 -2px;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+body {
+    background-color: #f5efe6;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: #faf3e0;
+    color: #4a4a4a;
+    transition: transform 0.2s;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+.card-body {
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    background-color: #f0e5d8;
+    color: #4a4a4a;
+}
+
+.container-fluid {
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.navbar {
+    background-color: #D9C4A1; /*Колір темного крему */
+}
+
+/* Зробити текст жирнішим і змінити його колір на темно-сірий */
+.navbar-nav .nav-link {
+    font-weight: bold; /*Текст жирним */
+    font-size: 1.1rem; /*Збільшити розмір шрифту */
+    color: #4E4A47; /*Темно-сірий колір */
+}
+
+.page-title {
+    font-weight: bold; /*Текст жирним */
+    font-size: 1.1rem; /*Збільшити розмір шрифту */
+    color: #4E4A47; /*Колір тексту */
+}
+/* Зміна кольору при ховері */
+.navbar-nav .nav-link:hover {
+    color: #2C2A28; /*Темніший колір на ховер */
+}
+
+/* Стиль для назви в navbar */
+.navbar-brand {
+    font-weight: bold; /* Текст жирним */
+    font-size: 1.2rem; /* Збільшити розмір шрифту */
+    color: #4E4A47; /*Темно-сірий колір, такий самий як у навбарі */
+}
+
+    /*  Зміна кольору при ховері для назви */
+    .navbar-brand:hover {
+        color: #2C2A28; /*Темніший колір при наведенні */
+    }
+
+.product-container {
+    height: 600px; /*Фіксована висота блоку */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Масштабування без обрізання */
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* Фон випадаючого списку */
+    border: 1px solid #ddd; /* Легка рамка */
+}
+
+.dropdown-item {
+    color: #4E4A47; /*Колір тексту */
+    font-weight: bold;
+}
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: #d6d6d6 !important; /*Світло-сірий при наведенні */
+        color: #333 !important; /*Трохи темніший текст */
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: #bfbfbf !important; /* Сірий для активного вибору */
+        color: #222 !important; /*Темніший текст */
+    }
+
+
+.btn {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Кнопка "Edit" (оливковий, щоб пасувало до кремового) */
+.btn-primary {
+    background-color: #A68A64; /*Теплий оливково-бежевий */
+    border-color: #8D7252;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #8D7252; /* Темніший відтінок */
+        border-color: #735B40;
+    }
+
+/* Кнопка "Delete" (бордовий замість яскраво-червоного) */
+.btn-danger {
+    background-color: #934B4B; /*Приглушений бордовий */
+    border-color: #7A3D3D;
+    color: white;
+}
+
+    .btn-danger:hover {
+        background-color: #7A3D3D; /*Темніший відтінок */
+        border-color: #623131;
+    }
+
+/* Робимо bg-secondary світло-кремовим */
+.bg-secondary {
+    background-color: #faf3e0 !important; /*Світло-кремовий */
+    border-color: #D9C4A1 !important; /*Трохи темніший кремовий */
+}
+
+.btn-secondary {
+    background-color: #F5F5DC; /* Світло-кремовий */
+    border-color: #E0E0C0; /* Трохи темніший кремовий для обрамлення */
+    color: #4A4A4A; /* Темно-сірий для тексту */
+}
+
+    .btn-secondary:hover {
+        background-color: #E0E0C0; /* Темніший відтінок кремового при наведенні */
+        border-color: #C0C0A0;
+        color: #333333;
+    }
+/* Outline Primary Button */
+.btn-outline-primary {
+    background-color: transparent !important; /* Прозорий фон */
+    border: 2px solid #8D7252 !important; /* Межа як у звичайної кнопки */
+    color: #8D7252 !important; /* Колір тексту як межа */
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus {
+        background-color: #A68A64 !important; /* Колір основної кнопки при ховері */
+        border-color: #735B40 !important;
+        color: white !important; /* Білий текст при наведенні */
+    }
+
+    .btn-outline-primary:active {
+        background-color: #8D7252 !important; /* Темніший відтінок при активному стані */
+        border-color: #5C4A32 !important;
+    }
+/* Primary Background */
+.bg-primary {
+    background-color: #A68A64 !important; /* Основний оливково-бежевий */
+    border-color: #8D7252 !important;
+    color: white !important; /* Білий текст для контрасту */
+}
+
+/* Градієнтний фон (вертикальний) */
+.bg-gradient {
+    background: linear-gradient(135deg, #A68A64 0%, #faf3e0 100%) !important;
+    border: 1px solid #D9C4A1 !important;
+    color: #4a4a4a !important; /* Основний колір тексту */
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+/* Додаємо змінні для тексту */
+:root {
+    --text-primary: #4E4A47; /* Основний текст */
+    --text-secondary: #7A746E; /* Вторинний (приглушений сіро-коричневий) */
+    --text-tertiary: #9C958D; /* Третій рівень (підказки, іконки) */
+}
+
+/* Загальні стилі */
+.text-primary {
+    color: var(--text-secondary) !important;
+}
+
+/* Специфічні класи */
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-tertiary {
+    color: var(--text-tertiary) !important;
+}
+
+/* Приклади використання */
+.card-subtitle,
+.form-label,
+.navbar-text,
+.dropdown-header {
+    color: var(--text-secondary);
+}
+
+.input-group-text,
+.form-text {
+    color: var(--text-tertiary);
+}
