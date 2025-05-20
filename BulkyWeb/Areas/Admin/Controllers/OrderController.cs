@@ -17,14 +17,14 @@ namespace BeautiqueWeb.Areas.Admin.Controllers
     public class OrderController : Controller
     {
 
-        private readonly IConfiguration _configuration;
+      
         private readonly IUnitOfWork _unitOfWork;
         [BindProperty]
         public OrderVM OrderVM { get; set; }
-        public OrderController(IUnitOfWork unitOfWork, IConfiguration configuration)
+        public OrderController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _configuration = configuration;
+           
         }
 
         public IActionResult Index()
@@ -143,7 +143,7 @@ namespace BeautiqueWeb.Areas.Admin.Controllers
                 .GetAll(u => u.OrderHeaderId == OrderVM.OrderHeader.Id, includeProperties: "Product");
 
             //stripe logic
-            var domain = _configuration["AppSettings:BaseUrl"];
+            var domain = "https://beautiqueweb-projectdb-a4bnbthqc8cwdhfa.westus3-01.azurewebsites.net/";
 
             var options = new SessionCreateOptions
             {

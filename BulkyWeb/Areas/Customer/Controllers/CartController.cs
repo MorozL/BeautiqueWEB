@@ -15,15 +15,15 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
     [Authorize]
     public class CartController : Controller
     {
-        private readonly IConfiguration _configuration;
+        
         private readonly IUnitOfWork _unitOfWork;
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
-        public CartController(IUnitOfWork unitOfWork, IConfiguration configuration)
+        public CartController(IUnitOfWork unitOfWork)
         {
 
             _unitOfWork = unitOfWork;
-            _configuration = configuration;
+           
         }
         public IActionResult Index()
         {
@@ -127,7 +127,7 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
                 //профіль користовуча і нам потрібно зафіксувати платіж
                 //логіка stripe
 
-                var domain = _configuration["AppSettings:BaseUrl"];
+                var domain = "https://beautiqueweb-projectdb-a4bnbthqc8cwdhfa.westus3-01.azurewebsites.net/";
 
                 var options = new SessionCreateOptions
                 {
