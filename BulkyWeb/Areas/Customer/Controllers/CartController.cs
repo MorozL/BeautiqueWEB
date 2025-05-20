@@ -15,6 +15,7 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
     [Authorize]
     public class CartController : Controller
     {
+        private readonly IConfiguration _configuration;
         private readonly IUnitOfWork _unitOfWork;
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
@@ -124,7 +125,7 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
                 //профіль користовуча і нам потрібно зафіксувати платіж
                 //логіка stripe
 
-                var domain = $"{Request.Scheme}://{Request.Host.Value}";
+                var domain = _configuration["AppSettings:BaseUrl"];
 
                 var options = new SessionCreateOptions
                 {

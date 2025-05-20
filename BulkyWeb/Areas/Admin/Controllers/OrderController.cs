@@ -17,7 +17,7 @@ namespace BeautiqueWeb.Areas.Admin.Controllers
     public class OrderController : Controller
     {
 
-
+        private readonly IConfiguration _configuration;
         private readonly IUnitOfWork _unitOfWork;
         [BindProperty]
         public OrderVM OrderVM { get; set; }
@@ -142,7 +142,7 @@ namespace BeautiqueWeb.Areas.Admin.Controllers
                 .GetAll(u => u.OrderHeaderId == OrderVM.OrderHeader.Id, includeProperties: "Product");
 
             //stripe logic
-            var domain = $"{Request.Scheme}://{Request.Host.Value}";
+            var domain = _configuration["AppSettings:BaseUrl"];
 
             var options = new SessionCreateOptions
             {
